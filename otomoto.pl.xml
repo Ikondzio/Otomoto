@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite>
+	<id>S1</id>
+	<name>Master</name>
+	<description></description>
+	<sections>
+		<section>
+		<name>Otomoto</name>
+		<description></description>
+						<cases>
+												<case>
+				<id>C2</id>
+				<title>Zakładanie konta</title>
+												<template>Test Case (Text)</template>
+																<type>Functional</type>
+																<priority>Medium</priority>
+								<status>Design</status>
+												<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>1.Strona www.otomoto.pl jest otwarta w przeglądarce Chrome
+2.Połączenie z internetem jest aktywne a strona sklepu jest dostępna.
+</preconds>
+										<steps>1. Wchodzimy na strone www.otomoto.pl
+2. Akceptujemy politykę prywatnośći klikając przycisk &quot;Akceptuję&quot;
+3. Klikamy przycisk &quot;Zarejestruj się&quot;
+4. Wybieramy opcję &quot;Załóż konto&quot;
+5. Wpisujemy mail : Testowy02@vp.pl
+6. Wpisujemy hasło : Testowy00#!
+7. Weryfikujemy adres e-mail, klikając na otrzymany link w mailu.</steps>
+										<expected>Użytkownik poprawnie utworzył konto</expected>
+									</custom>
+							</case>
+															<case>
+				<id>C3</id>
+				<title>Zakładanie konta na zarejestrowany adres mail - test negatywny</title>
+												<template>Test Case (Text)</template>
+																<type>Functional</type>
+																<priority>Medium</priority>
+								<status>Design</status>
+												<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>1. Strona www.otomoto.pl jest otwarta w przeglądarce Chrome
+2. Założone konto na adres mail: Testowy02@vp.pl
+3 Pliki cookies zostały zaakceptowane
+4 Połączenie z internetem jest aktywne a strona sklepu jest dostępna. </preconds>
+										<steps>1. Na stronie głównej otomoto.pl klikamy przycisk &quot;Zarejestruj się&quot;
+2. Wybieramy opcję &quot;Załóż konto&quot;
+3. Wpisujemy mail: Testowy02@vp.pl
+4. Wpisujemy hasło: Testowy00#!
+5. Klikamy przycisk: &quot;Załóż konto&quot;</steps>
+										<expected>Użytkownik otrzymuje informację &quot;Podany adres e-mail został już użyty do utworzenia innego konta. Spróbuj ponownie, używając innego adresu e-mail.&quot;</expected>
+									</custom>
+							</case>
+															<case>
+				<id>C4</id>
+				<title>Poprawne logowanie</title>
+												<template>Test Case (Text)</template>
+																<type>Functional</type>
+																<priority>Medium</priority>
+								<status>Design</status>
+												<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>1. Strona www.otomoto.pl jest otwarta w przeglądarce Chrome
+2. Pliki cookies zostały zaakceptowane
+3. Połączenie z internetem jest aktywne a strona sklepu jest dostępna</preconds>
+										<steps>1. Klikamy przycisk &quot;Zaloguj&quot;
+2. Wpisujemy mail: Testowy02@vp.pl
+3. Wpisujemy hasło: Testowy00#!
+4. Klikamy przycisk &quot;Zaloguj się&quot;</steps>
+										<expected>Użytkownik został poprwanie zalogowany do swojego konta</expected>
+									</custom>
+							</case>
+															<case>
+				<id>C5</id>
+				<title>Błędne logowanie - niepoprawne hasło - test negatywny</title>
+												<template>Test Case (Text)</template>
+																<type>Functional</type>
+																<priority>Medium</priority>
+								<status>Design</status>
+												<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>1. Strona www.otomoto.pl jest otwarta w przeglądarce Chrome
+2. Założone konto na adres mail: Testowy02@vp.pl
+3. Pliki cookies zostały zaakceptowane
+4. Połączenie z internetem jest aktywne a strona sklepu jest dostępna</preconds>
+										<steps>1. Klikamy przycisk &quot;Zaloguj&quot;
+2. Wpisujemy mail: Testowy00#!vp.pl
+3. Wpisujemy błędne hasło: testy001
+4. Klikamy przycisk &quot;Zaloguj się&quot;</steps>
+										<expected>Użytkownik otrzymuję informację: &quot;Nieprawidłowy login lub hasło&quot;</expected>
+									</custom>
+							</case>
+															<case>
+				<id>C6</id>
+				<title>Filtrowanie ogłoszeń</title>
+												<template>Test Case (Text)</template>
+																<type>Functional</type>
+																<priority>Medium</priority>
+								<status>Design</status>
+												<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>1. Strona www.otomoto.pl jest otwarta w przeglądarce Chrome
+2. Pliki cookies zostały zaakceptowane
+3. Użytkownik jest zalogowany danymi mail Testowy02@vp.pl hasło: Testowy00#!
+3. Połączenie z internetem jest aktywne a strona sklepu jest dostępna.</preconds>
+										<steps>1. Na stronie głównej wybieramy kategorię &quot;Osobowe&quot;
+2. Wybieramy markę pojazdu: Peugeot
+3. Wybieramy model pojazdu: 408
+4. Klikamy przycisk &quot;Pokaż &quot;liczba&quot; ogłoszeń&quot;</steps>
+										<expected>Użytkownik otrzymał ogłoszenia według wybranej przez siebie filtracji.
+</expected>
+									</custom>
+							</case>
+															<case>
+				<id>C7</id>
+				<title>Wyświetlanie kontaktu do sprzedającego</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+								<status>Design</status>
+												<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>1. Strona www.otomoto.pl jest otwarta w przeglądarce Chrome
+2. Pliki cookies zostały zaakceptowane
+3. Użytkownik jest zalogowany danymi mail Testowy02@vp.pl hasło: Testowy00#!
+3. Połączenie z internetem jest aktywne a strona sklepu jest dostępna.</preconds>
+										<steps>1. Na stronie głównej www.otomoto.pl klikamy przycisk &quot;Pokaż (liczba) Ogłoszeń&quot;
+2. Z wyświetlonej listy ogłoszeń wybieramy jedno i klikamy w nie.
+3. W wybrany ogłoszeniu kliknij przycisk &quot; Kontakt ze sprzedającym&quot;
+4. W wyświetlonym oknie wybieramy temat wiadomości 
+5. Klikamy przycisk &quot;Następne&quot;
+6. Wpisujemy Numer telefonu
+7. Wpisujemy treść wiadomości
+8. Klikamy przycisk &quot;Wyślij wiadomość&quot;</steps>
+										<expected>Użytkownik otrzymuje możliwość kontaktu ze sprzedającym 
+</expected>
+									</custom>
+							</case>
+															<case>
+				<id>C8</id>
+				<title>Wyświetlanie kontaktu do sprzedającego bez logowania- Test negatywny</title>
+												<template>Test Case (Text)</template>
+																<type>Functional</type>
+																<priority>Medium</priority>
+								<status>Design</status>
+												<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>1. Strona www.otomoto.pl jest otwarta w przeglądarce Chrome
+2. Pliki cookies zostały zaakceptowane
+3. Połączenie z internetem jest aktywne a strona sklepu jest dostępna.</preconds>
+										<steps>1. Na stronie głównej www.otomoto.pl klikamy przycisk &quot;Pokaż (liczba) Ogłoszeń&quot;
+2. Z wyświetlonej listy ogłoszeń wybieramy jedno i klikamy w nie.
+3. W wybrany ogłoszeniu kliknij przycisk &quot; Kontakt ze sprzedającym&quot;
+4. Wyświetla się okno logowania</steps>
+										<expected>Bez zalogowania do konta, kontakt do sprzedającego nie zostanie wyświetlony.
+</expected>
+									</custom>
+							</case>
+															<case>
+				<id>C9</id>
+				<title>Wyszukiwanie ogłoszeń za pomocą lokalizacji</title>
+												<template>Test Case (Text)</template>
+																<type>Functional</type>
+																<priority>Medium</priority>
+								<status>Design</status>
+												<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>1.Strona www.otomoto.pl jest otwarta w przeglądarce Chrome
+2.Pliki cookies zostały zaakceptowane
+3.Użytkownik jest zalogowany danymi mail Testowy02@vp.pl hasło: Testowy00#!
+4.Połączenie z internetem jest aktywne a strona sklepu jest dostępna.</preconds>
+										<steps>1. Na stronie głównej klikamy przycisk &quot;Wyszukiwanie zaawansowane&quot;
+2. Wybieramy filtr &quot;Lokalizacja&quot;
+3. Wpisujemy lokalizację &quot;Kraków&quot;
+4. W polu &quot;Pokaż ogłoszenia w promieniu&quot; wybieramy 5km
+5. Klikamy przycisk &quot; Pokaż wyniki (liczba Ogłoszeń)&quot;
+</steps>
+										<expected>Użytkownik otrzymał wyniki wyszukiwania ogłoszeń, znajdujących się w Krakowie i w promieniu 5km</expected>
+									</custom>
+							</case>
+								</cases>
+							</section>
+	</sections>
+</suite>
