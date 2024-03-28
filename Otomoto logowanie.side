@@ -1,0 +1,110 @@
+{
+  "id": "1fef9082-a2a8-4253-b9c2-7e9a2909ca3c",
+  "version": "2.0",
+  "name": "Otomoto logowanie",
+  "url": "https://www.otomoto.pl",
+  "tests": [{
+    "id": "89cd64e5-5977-4c6a-8d59-d0b79e67a3b0",
+    "name": "Otomoto logowanie",
+    "commands": [{
+      "id": "5235f95d-83d8-458b-b3ae-3f55e6e39eae",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b5d479af-e9f4-4c08-91ba-f052f8c1b198",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1552x832",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "62655909-aa1c-462c-aaac-6326869e32b3",
+      "comment": "",
+      "command": "click",
+      "target": "css=.ooa-cozpg8 .button-text-wrapper",
+      "targets": [
+        ["css=.ooa-cozpg8 .button-text-wrapper", "css:finder"],
+        ["xpath=//header[@id='page-header']/div/nav/ul/li[5]/div/div/button/span/span", "xpath:idRelative"],
+        ["xpath=//div/div/button/span/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "33f552f9-6194-4e91-a69c-10cbde59d4de",
+      "comment": "",
+      "command": "click",
+      "target": "name=username",
+      "targets": [
+        ["name=username", "name"],
+        ["css=.css-1inwc67", "css:finder"],
+        ["xpath=//input[@name='username']", "xpath:attributes"],
+        ["xpath=//div[@id='__next']/div/div/div/div/div/div[2]/div[2]/div[2]/form/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "cf222190-88e5-4ebf-86c7-bff8d5d7ecd0",
+      "comment": "",
+      "command": "type",
+      "target": "name=username",
+      "targets": [
+        ["name=username", "name"],
+        ["css=.css-1tfa98v", "css:finder"],
+        ["xpath=//input[@name='username']", "xpath:attributes"],
+        ["xpath=//div[@id='__next']/div/div/div/div/div/div[2]/div[2]/div[2]/form/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "testowy02@vp.pl"
+    }, {
+      "id": "e1a44b77-043a-4d39-a5c3-4e4b9036e861",
+      "comment": "",
+      "command": "click",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=.css-6bwopl", "css:finder"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//div[@id='__next']/div/div/div/div/div/div[2]/div[2]/div[2]/form/div[2]/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4123e3d3-bfa5-4d77-a042-890259bb70ce",
+      "comment": "",
+      "command": "type",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=.css-7hvnmq", "css:finder"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//div[@id='__next']/div/div/div/div/div/div[2]/div[2]/div[2]/form/div[2]/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div/input", "xpath:position"]
+      ],
+      "value": "Testowy00#!"
+    }, {
+      "id": "70841af6-6c71-417f-b231-821849af088c",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-1m3y0q6",
+      "targets": [
+        ["css=.css-1m3y0q6", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[@id='__next']/div/div/div/div/div/div[2]/div[2]/div[2]/form/button[2]", "xpath:idRelative"],
+        ["xpath=//form/button[2]", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "f37197b8-e653-4817-b1d1-b0a9cdd5ca3a",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["89cd64e5-5977-4c6a-8d59-d0b79e67a3b0"]
+  }],
+  "urls": ["https://www.otomoto.pl/"],
+  "plugins": []
+}
