@@ -1,0 +1,57 @@
+{
+  "id": "4a4e49be-70be-40ab-9730-597d4c7b30a7",
+  "version": "2.0",
+  "name": "Otomoto",
+  "url": "https://www.otomoto.pl",
+  "tests": [{
+    "id": "45b20dfc-25a9-456d-9e0e-a47bde41e3ec",
+    "name": "Niedziałający link Akademia Rozwoju Dealera",
+    "commands": [{
+      "id": "f881f264-50ca-4547-a77b-cb06f6c25145",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "755ae3ea-e635-4c67-9771-c6ac2b341663",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1552x832",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "123a573e-1a34-4b52-8125-756de7b4a536",
+      "comment": "",
+      "command": "click",
+      "target": "css=.ooa-1c9dq69:nth-child(2) .ooa-7c7h65:nth-child(4) .ooa-1c7232r",
+      "targets": [
+        ["css=.ooa-1c9dq69:nth-child(2) .ooa-7c7h65:nth-child(4) .ooa-1c7232r", "css:finder"],
+        ["xpath=//footer[@id='page-footer']/section/article[2]/ul/li[4]/a/p", "xpath:idRelative"],
+        ["xpath=//article[2]/ul/li[4]/a/p", "xpath:position"],
+        ["xpath=//p[contains(.,'Akademia Rozwoju Dealera')]", "xpath:innerText"]
+      ],
+      "value": "",
+      "opensWindow": true,
+      "windowHandleName": "win8898",
+      "windowTimeout": 2000
+    }, {
+      "id": "9cb42a18-d44a-483e-89ff-3ff2da3b42be",
+      "comment": "",
+      "command": "selectWindow",
+      "target": "handle=${win8898}",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "c59daf70-fba3-4c9f-9e64-ca4441ae9654",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["45b20dfc-25a9-456d-9e0e-a47bde41e3ec"]
+  }],
+  "urls": ["https://www.otomoto.pl/"],
+  "plugins": []
+}
